@@ -3,227 +3,127 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Travel Planner | Expedição Nordeste 2026</title>
+<title>Travel Planner - Expedição Nordeste 2026</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-    background:#eef2f7;
     display:flex;
-    min-height:100vh;
+    background:#eef3f8;
+    color:#333;
 }
 
 aside{
-    width:260px;
+    width:240px;
+    min-height:100vh;
     background:#0f172a;
     color:white;
-    padding:25px;
+    padding:20px;
 }
 
 aside h2{
-    margin-bottom:30px;
+    margin-bottom:25px;
 }
 
-.menu{
+aside ul{
     list-style:none;
 }
 
-.menu li{
-    padding:14px;
-    border-radius:10px;
-    cursor:pointer;
+aside li{
+    padding:12px;
     margin-bottom:8px;
-    transition:.3s;
+    border-radius:8px;
+    cursor:pointer;
 }
 
-.menu li:hover{
-    background:#1d4ed8;
-}
-
-.active{
+aside li:hover{
     background:#2563eb;
 }
 
 main{
     flex:1;
-    padding:35px;
-}
-
-header{
-    margin-bottom:35px;
-}
-
-header h1{
-    color:#1e293b;
-}
-
-header p{
-    color:#666;
-    margin-top:5px;
+    padding:30px;
 }
 
 .cards{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-
-gap:20px;
-
-margin-bottom:35px;
-
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin:25px 0;
 }
 
 .card{
-
-background:white;
-
-padding:25px;
-
-border-radius:15px;
-
-box-shadow:0 8px 18px rgba(0,0,0,.08);
-
-transition:.3s;
-
-}
-
-.card:hover{
-
-transform:translateY(-5px);
-
+    background:white;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
 }
 
 .card h3{
-
-color:#555;
-
-margin-bottom:12px;
-
+    color:#777;
+    margin-bottom:10px;
 }
 
 .card h2{
-
-font-size:32px;
-
-color:#2563eb;
-
-margin-bottom:8px;
-
-}
-
-.progress{
-
-background:#dfe6ee;
-
-height:18px;
-
-border-radius:50px;
-
-overflow:hidden;
-
-margin-top:15px;
-
-}
-
-.progress div{
-
-height:100%;
-
-width:15%;
-
-background:#2563eb;
-
-}
-
-.section{
-
-background:white;
-
-padding:25px;
-
-border-radius:15px;
-
-box-shadow:0 8px 18px rgba(0,0,0,.08);
-
-margin-bottom:25px;
-
+    color:#2563eb;
 }
 
 table{
-
-width:100%;
-
-border-collapse:collapse;
-
-margin-top:15px;
-
-}
-
-th,td{
-
-padding:12px;
-
-border-bottom:1px solid #eee;
-
-text-align:left;
-
+    width:100%;
+    background:white;
+    border-collapse:collapse;
+    border-radius:12px;
+    overflow:hidden;
 }
 
 th{
-
-background:#f5f5f5;
-
+    background:#2563eb;
+    color:white;
+    padding:12px;
 }
 
-button{
-
-background:#2563eb;
-
-border:none;
-
-padding:12px 20px;
-
-border-radius:8px;
-
-color:white;
-
-cursor:pointer;
-
-margin-top:20px;
-
+td{
+    padding:12px;
+    border-bottom:1px solid #eee;
 }
 
-button:hover{
+.progress{
+    width:100%;
+    background:#ddd;
+    height:16px;
+    border-radius:20px;
+    overflow:hidden;
+}
 
-background:#1d4ed8;
+.bar{
+    height:100%;
+    width:15%;
+    background:#2563eb;
+}
 
+footer{
+    margin-top:40px;
+    color:#777;
 }
 
 @media(max-width:900px){
 
 body{
-
 flex-direction:column;
-
 }
 
 aside{
-
 width:100%;
-
+min-height:auto;
 }
 
 }
-
 </style>
 
 </head>
@@ -234,27 +134,17 @@ width:100%;
 
 <h2>🌴 Travel Planner</h2>
 
-<ul class="menu">
+<ul>
 
-<li class="active">🏠 Dashboard</li>
-
+<li>🏠 Dashboard</li>
 <li>💰 Financeiro</li>
-
 <li>✈️ Voos</li>
-
 <li>🏨 Hospedagens</li>
-
-<li>🚐 Transporte</li>
-
+<li>🚗 Transporte</li>
 <li>🏖 Passeios</li>
-
 <li>🍽 Restaurantes</li>
-
 <li>🌊 Marés</li>
-
-<li>📋 Checklist</li>
-
-<li>📄 Documentos</li>
+<li>✔ Checklist</li>
 
 </ul>
 
@@ -262,65 +152,41 @@ width:100%;
 
 <main>
 
-<header>
-
 <h1>Expedição Nordeste 2026</h1>
 
 <p>29/08/2026 até 11/09/2026</p>
 
-</header>
-
 <div class="cards">
 
 <div class="card">
+<h3>Família</h3>
+<h2>Fabio • Tati • Rafa</h2>
+</div>
 
-<h3>💰 Passagens</h3>
-
+<div class="card">
+<h3>Passagens Pagas</h3>
 <h2>R$ 4.200</h2>
-
-<p>Pago</p>
-
 </div>
 
 <div class="card">
-
-<h3>👨‍👩‍👦 Família</h3>
-
-<h2>3 Pessoas</h2>
-
-<p>Fabio • Tati • Rafa</p>
-
-</div>
-
-<div class="card">
-
-<h3>📅 Duração</h3>
-
+<h3>Duração</h3>
 <h2>14 dias</h2>
-
-<p>Nordeste</p>
-
 </div>
 
 <div class="card">
-
-<h3>📊 Planejamento</h3>
-
-<h2>15%</h2>
+<h3>Planejamento</h3>
 
 <div class="progress">
+<div class="bar"></div>
+</div>
 
-<div></div>
+<p style="margin-top:10px;">15% concluído</p>
 
 </div>
 
 </div>
 
-</div>
-
-<div class="section">
-
-<h2>Resumo da Viagem</h2>
+<h2>Checklist Inicial</h2>
 
 <table>
 
@@ -342,17 +208,17 @@ width:100%;
 
 <tr>
 
-<td>Hospedagens</td>
+<td>Hospedagem Santo Amaro</td>
 
-<td>⏳ Em pesquisa</td>
+<td>🟡 Pesquisando</td>
 
 </tr>
 
 <tr>
 
-<td>Transfers</td>
+<td>Transfer</td>
 
-<td>⏳ Pendente</td>
+<td>🟡 Pendente</td>
 
 </tr>
 
@@ -360,7 +226,7 @@ width:100%;
 
 <td>Passeios</td>
 
-<td>⏳ Planejamento</td>
+<td>🟡 Planejamento</td>
 
 </tr>
 
@@ -368,48 +234,19 @@ width:100%;
 
 <td>Restaurantes</td>
 
-<td>⏳ Pesquisa</td>
+<td>🟡 Pesquisa</td>
 
 </tr>
 
 </table>
 
-</div>
+<footer>
 
-<div class="section">
+Versão 0.1 • Travel Planner • Família Fabio, Tati e Rafa
 
-<h2>Próximas Entregas</h2>
-
-<ul style="margin-left:25px;margin-top:15px;line-height:30px;">
-
-<li>Dashboard Financeiro</li>
-
-<li>Cronograma Diário</li>
-
-<li>Comparativo de Hotéis</li>
-
-<li>Controle de Custos</li>
-
-<li>Mapa Interativo</li>
-
-<li>Controle das Marés</li>
-
-<li>Checklist da Viagem</li>
-
-<li>Central de Documentos</li>
-
-</ul>
-
-<button onclick="alert('Sprint 2 em desenvolvimento 🚀')">
-
-Ver Próxima Sprint
-
-</button>
-
-</div>
+</footer>
 
 </main>
 
 </body>
-
 </html>
